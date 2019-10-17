@@ -1,7 +1,6 @@
- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu&display=swap" rel="stylesheet"> <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu&display=swap" rel="stylesheet"> 
@@ -98,7 +97,7 @@
 	align-items: center;
 }
 
-#first button {
+#firstUpload {
 	background-color: #0fc789;
 	height: 42px;
 	width: 30%;
@@ -106,16 +105,16 @@
 	border-radius: 20px;
 	line-height: 20px;
 	padding: 3px;
+	cursor: pointer;
 }
 
-#first input {
+#firstSelect {
 	width: 30%;
 	font-size: 18px;
-	padding-left: 5px;
 	background-color: inherit;
 	border: none;
-	border-bottom: 3px solid #000000
-	line-height 20px;
+	cursor: pointer;
+	overflow: scroll;
 }
 
 #first i {
@@ -137,22 +136,24 @@
 	align-items: center;
 }
 
-#second button {
+#secondUpload {
 	background-color: #0fc789;
 	height: 42px;
 	width: 30%;
 	font-size: 18px;
 	border-radius: 20px;
 	border: none;
-	padding: 5px;
+	padding: 3px;
+	cursor: pointer;
 }
 
-#second input {
+#secondSelect {
 	width: 30%;
 	font-size: 18px;
-	padding-left: 5px;
 	background-color: inherit;
 	border: none;
+	cursor: pointer;
+	overflow: scroll;
 }
 
 #second i {
@@ -228,8 +229,8 @@
               	display: none;
             }
 
-            #first label, #first button, #first input,
-            #second label, #second button, #second input
+            #first label, #firstUpload, #firstSelect,
+            #second label, #secondUpload, #secondSelect
             {
         	font-size: 20px;
         	height: 42px;
@@ -281,21 +282,21 @@
             	margin: auto;
             }
 
-            #first label, #first button, #first input,
-            #second label, #second button, #second input {
+            #first label, #firstUpload, #firstSelect,
+            #second label, #secondUpload, #secondSelect {
         	    font-size: 16px;
         	    height: 32px;
             }
 
-            #second button, #first button {
+            #secondUpload, #firstUpload {
             	width: 25%;
             }
 
         }
 
         @media screen and (max-width: 450px) {
-        	#first label, #first button, #first input,
-            #second label, #second button, #second input {
+        	#first label, #firstUpload, #firstSelect,
+            #second label, #secondUpload, #secondSelect {
         	    font-size: 14px;
             }
 
@@ -304,7 +305,6 @@
 	           height: 49px;
 	            font-size: 14px;
             }
-
         }
 	</style>
 </head>
@@ -317,13 +317,13 @@
 	<form id="forms">
 		<div id="first">
 			<label>FIRST DOCUMENT:</label>
-			<input type="text" name="" placeholder="Docufix.txt">
-			<button type="button"><i class="fa fa-cloud-upload"></i><span>upload</span></button>
+			<button id="firstSelect" type="button" >Click to select file</button>
+			<button id="firstUpload" type="button"><i class="fa fa-cloud-upload"></i><span>upload</span></button>
 		</div>
 		<div id="second">
 			<label>SECOND DOCUMENT:</label>
-			<input type="text" name="" placeholder="Docufix.txt">
-		    <button type="button"><i class="fa fa-cloud-upload"></i><span>upload</span></button>
+			<button id="secondSelect" type="button" >Click to select file</button>
+		    <button id="secondUpload" type="button"><i class="fa fa-cloud-upload"></i><span>upload</span></button>
 		</div>
 	    <div id="compare"><button><i class=""></i>COMPARE</button></div>
     </form>
